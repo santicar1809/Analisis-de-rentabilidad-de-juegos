@@ -74,14 +74,6 @@ print(100*df.isna().sum()/df.shape[0])
 # %% [markdown]
 #  Borramos los ausentes de la columna name y genre, ya que no son significantes en el dataframe. Con respecto a los ausentes de las columnas **'critic_score', 'user_score' y 'rating'**, al ser el porcentaje tan alto, mayor al **30% de los datos** no es viable eliminarnos ni rellenarlos con algun estadístico, debido a que esto modificaría una gran parte de los datos afectando el análisis.
 
-# %%
-#Llenamos los valores de la columna year_of_release por la mediana.
-df['year_of_release'].fillna(df['year_of_release'].median(),inplace=True)
-print(100*df.isna().sum()/df.shape[0])
-
-# %% [markdown]
-# Para el caso de el año de realización lo llenamos con la **mediana**.
-
 # %% [markdown]
 # **Verificamos si existen duplicados en nuestros datos.**
 
@@ -93,7 +85,7 @@ print(df.duplicated().sum())
 
 # %%
 #Calculamos el total de ventas de todas las regiones.
-df['total_sales']=df['na_sales']+df['eu_sales']+df['jp_sales']
+df['total_sales']=df['na_sales']+df['eu_sales']+df['jp_sales']+df['other_sales']
 print(df.iloc[:,4:])
 
 # %% [markdown]
