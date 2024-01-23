@@ -47,8 +47,8 @@ print(df.info())
 # %%
 #Vamos a cambiar la columna 'user_score' a numérico para hacer operaciones con estos valores, usamos el parámetro error=coerce para que no tenga en cuenta el objeto 'tbd'.
 df.info()
-df['user_score']=pd.to_numeric(df['user_score'],errors='coerce')
 df.info()
+df['user_score']=pd.to_numeric(df['user_score'],errors='coerce')
 
 # %% [markdown]
 # Pasamos la columna 'user_score' a float, debido a que se trata de calificaciones numericas, por lo tanto debemos hacer operaciones con estos.  
